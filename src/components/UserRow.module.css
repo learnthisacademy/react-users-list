@@ -1,25 +1,30 @@
 .wrapper {
 	display: flex;
 	align-items: center;
-	justify-content: space-between;
 
-	border: 1px solid gray;
-	border-radius: 1rem;
-	padding: 1rem;
+	box-shadow: var(--shadow-sm);
+	border-radius: var(--radius-md);
+	padding: 0.75rem 1.5rem;
 	margin-bottom: 1rem;
-}
-
-.name {
-	width: 40%;
-	font-weight: bold;
 }
 
 .status,
 .role,
 .action {
-	width: 20%;
-
 	display: flex;
 	justify-content: center;
 	align-items: center;
+}
+
+.name {
+	width: 45%;
+}
+
+.status,
+.role {
+	width: 20%;
+}
+
+.action {
+	width: 15%;
 }
