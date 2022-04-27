@@ -1,0 +1,32 @@
+.input {
+	opacity: 0;
+	position: absolute;
+	top: -100vh;
+}
+
+.label {
+	cursor: pointer;
+	position: relative;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	height: 2rem;
+	width: 2rem;
+	border-radius: var(--radius-sm);
+	box-shadow: var(--shadow-sm);
+}
+
+.label:focus-within {
+	box-shadow: var(--shadow-md);
+}
+
+.check {
+	user-select: none;
+	height: 1.5rem;
+	width: 1.5rem;
+}
+
+.input:not(:checked) + .check {
+	display: none;
+}
