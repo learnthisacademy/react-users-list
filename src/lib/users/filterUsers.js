@@ -49,6 +49,9 @@ export const sortUsers = (users, sortBy) => {
 export const paginateUsers = (users, page, itemsPerPage) => {
 	const startIndex = (page - 1) * itemsPerPage;
 	const endIndex = startIndex + itemsPerPage;
+	const totalPages = Math.ceil(users.length / itemsPerPage);
 
-	return users.slice(startIndex, endIndex);
+	const paginatedUsers = users.slice(startIndex, endIndex);
+
+	return { paginatedUsers, totalPages };
 };
