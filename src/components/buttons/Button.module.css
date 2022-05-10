@@ -1,0 +1,30 @@
+.button {
+	height: 2.5rem;
+	outline: none;
+	padding: 0 1rem;
+	border: 1px solid;
+	border-radius: var(--radius-sm);
+	box-shadow: var(--shadow-sm);
+}
+
+.button:focus {
+	box-shadow: var(--shadow-md);
+}
+
+.button:disabled {
+	color: var(--color-lightgray);
+	background-color: var(--color-white);
+	border-color: var(--color-white);
+}
+
+.primary {
+	color: var(--color-white);
+	background-color: var(--color-black);
+	border-color: var(--color-black);
+}
+
+.secondary {
+	color: var(--color-black);
+	background-color: var(--color-white);
+	border-color: var(--color-black);
+}
