@@ -1,0 +1,32 @@
+.wrapper {
+	position: relative;
+	padding: 1.5rem;
+	margin-bottom: 2rem;
+	border-radius: var(--radius-md);
+	box-shadow: var(--shadow-sm);
+}
+
+.close {
+	position: absolute;
+	right: -1.25rem;
+	top: -1.25rem;
+}
+
+.row {
+	display: flex;
+	justify-content: space-between;
+}
+
+.row ~ .row {
+	margin-top: 1.5rem;
+}
+
+.input {
+	width: 45%;
+}
+
+.active {
+	display: flex;
+	align-items: center;
+	gap: 0.5rem;
+}
