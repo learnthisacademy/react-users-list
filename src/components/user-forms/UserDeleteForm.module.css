@@ -1,0 +1,8 @@
+.row {
+	display: flex;
+	justify-content: space-between;
+}
+
+.text {
+	margin-bottom: 2rem;
+}
