@@ -1,4 +1,4 @@
-import { USER_ROLES } from '../constants/userRoles';
+import { USER_ROLES } from '../../constants/userRoles';
 import style from './UserRole.module.css';
 
 const ROLE_STYLES = {

@@ -1,5 +1,5 @@
-import PageSelector from './forms/PageSelector';
-import Select from './forms/Select';
+import PageSelector from '../forms/PageSelector';
+import Select from '../forms/Select';
 import style from './UsersListPagination.module.css';
 
 const UsersListPagination = ({

@@ -1,5 +1,5 @@
-import CheckCircleIcon from './icons/CheckCircleIcon';
-import CrossCircleIcon from './icons/CrossCircleIcon';
+import CheckCircleIcon from '../icons/CheckCircleIcon';
+import CrossCircleIcon from '../icons/CrossCircleIcon';
 import style from './UserStatus.module.css';
 
 const UserStatus = ({ active }) => {
