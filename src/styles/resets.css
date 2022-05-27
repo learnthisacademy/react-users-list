@@ -285,3 +285,11 @@ Add the correct display in Chrome and Safari.
 summary {
 	display: list-item;
 }
+
+button {
+	cursor: pointer;
+}
+
+button:disabled {
+	cursor: default;
+}
