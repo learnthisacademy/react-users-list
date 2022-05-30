@@ -53,20 +53,10 @@ export const useFilters = () => {
 			itemsPerPage: newItemsPerPage
 		});
 
-	const resetFilters = () => setFilters(INITIAL_STATE);
-
-	const { search, onlyActive, sortBy, page, itemsPerPage } = filters;
+	const resetFilters = () => setFilters({ ...INITIAL_STATE });
 
 	return {
-		filters: {
-			search,
-			onlyActive,
-			sortBy
-		},
-		pagination: {
-			page,
-			itemsPerPage
-		},
+		filters,
 		filtersSetters: {
 			setSearch,
 			setOnlyActive,
