@@ -10,21 +10,21 @@
 		"server": "json-server ./users.json -p 4000"
 	},
 	"dependencies": {
-		"react": "17.0.2",
-		"react-dom": "17.0.2"
+		"react": "18.1.0",
+		"react-dom": "18.1.0"
 	},
 	"devDependencies": {
-		"@vitejs/plugin-react": "1.2.0",
-		"eslint": "7.32.0",
-		"eslint-config-prettier": "8.3.0",
-		"eslint-config-standard": "16.0.3",
-		"eslint-plugin-import": "2.25.4",
-		"eslint-plugin-node": "11.1.0",
+		"@vitejs/plugin-react": "1.3.2",
+		"eslint": "8.16.0",
+		"eslint-config-prettier": "8.5.0",
+		"eslint-config-standard": "17.0.0",
+		"eslint-plugin-import": "2.26.0",
+		"eslint-plugin-n": "15.2.0",
 		"eslint-plugin-promise": "6.0.0",
-		"eslint-plugin-react": "7.28.0",
-		"eslint-plugin-react-hooks": "4.4.0",
+		"eslint-plugin-react": "7.30.0",
+		"eslint-plugin-react-hooks": "4.5.0",
 		"json-server": "0.17.0",
-		"prettier": "2.5.1",
-		"vite": "2.8.1"
+		"prettier": "2.6.2",
+		"vite": "2.9.9"
 	}
 }
