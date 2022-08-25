@@ -8,6 +8,7 @@
 	--color-lightgray: #cfcfcf;
 	--color-black: #000000;
 	--color-white: #ffffff;
+	--color-overlay: #000000b3;
 	/* Shadows */
 	--shadow-sm: 0px 0px 8px rgba(69, 69, 69, 0.3);
 	--shadow-md: 0px 0px 12px rgba(69, 69, 69, 0.5);
