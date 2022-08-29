@@ -12,7 +12,7 @@ const UsersListRows = ({ users, error, loading, view }) => {
 	return (
 		<div className={style.container}>
 			{users.map(user => (
-				<UserComponent key={user.id} {...user} />
+				<UserComponent key={user.id} user={user} />
 			))}
 		</div>
 	);

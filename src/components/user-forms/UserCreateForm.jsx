@@ -14,7 +14,7 @@ import InputTextAsync from '../forms/InputTextAsync';
 import Select from '../forms/Select';
 import style from './UserCreateForm.module.css';
 
-const UserCreateForm = () => {
+const UserCreateForm = ({ closeModal }) => {
 	const { onSuccess } = useContext(UserFormsContext);
 
 	const [isSubmitting, setIsSubmitting] = useState(false);
@@ -22,49 +22,51 @@ const UserCreateForm = () => {
 
 	return (
 		<form
+			className={style.form}
 			onSubmit={ev =>
-				handleSubmit(ev, name, username, setIsSubmitting, onSuccess)
+				handleSubmit(ev, name, username, setIsSubmitting, onSuccess, closeModal)
 			}
 		>
-			<div className={style.row}>
-				<InputText
-					className={style.input}
-					label='Nombre'
-					placeholder='John Doe'
-					error={name.error}
-					value={name.value}
-					onChange={ev => dispatchFormValues(nameChanged(ev.target.value))}
-				></InputText>
-				<InputTextAsync
-					className={style.input}
-					label='Username'
-					placeholder='johndoe'
-					success={username.value && !username.loading && !username.error}
-					loading={username.loading}
-					error={username.error}
-					value={username.value}
-					onChange={ev => dispatchFormValues(usernameChanged(ev.target.value))}
-				></InputTextAsync>
+			<InputText
+				label='Nombre'
+				placeholder='John Doe'
+				error={name.error}
+				value={name.value}
+				onChange={ev => dispatchFormValues(nameChanged(ev.target.value))}
+			></InputText>
+			<InputTextAsync
+				label='Username'
+				placeholder='johndoe'
+				success={username.value && !username.loading && !username.error}
+				loading={username.loading}
+				error={username.error}
+				value={username.value}
+				onChange={ev => dispatchFormValues(usernameChanged(ev.target.value))}
+			></InputTextAsync>
+			<Select name='role'>
+				<option value={USER_ROLES.TEACHER}>Profesor</option>
+				<option value={USER_ROLES.STUDENT}>Alumno</option>
+				<option value={USER_ROLES.OTHER}>Otro</option>
+			</Select>
+			<div className={style.active}>
+				<InputCheckbox name='active' />
+				<span>¿Activo?</span>
 			</div>
-			<div className={style.row}>
-				<Select name='role'>
-					<option value={USER_ROLES.TEACHER}>Profesor</option>
-					<option value={USER_ROLES.STUDENT}>Alumno</option>
-					<option value={USER_ROLES.OTHER}>Otro</option>
-				</Select>
-				<div className={style.active}>
-					<InputCheckbox name='active' />
-					<span>¿Activo?</span>
-				</div>
-				<Button type='submit' disabled={isFormInvalid || isSubmitting}>
-					{isSubmitting ? 'Cargando...' : 'Crear usuario'}
-				</Button>
-			</div>
+			<Button type='submit' disabled={isFormInvalid || isSubmitting}>
+				{isSubmitting ? 'Cargando...' : 'Crear usuario'}
+			</Button>
 		</form>
 	);
 };
 
-const handleSubmit = async (ev, name, username, setIsSubmitting, onSuccess) => {
+const handleSubmit = async (
+	ev,
+	name,
+	username,
+	setIsSubmitting,
+	onSuccess,
+	closeModal
+) => {
 	ev.preventDefault();
 
 	setIsSubmitting(true);
@@ -81,6 +83,7 @@ const handleSubmit = async (ev, name, username, setIsSubmitting, onSuccess) => {
 
 	if (success) {
 		onSuccess();
+		closeModal();
 	} else {
 		setIsSubmitting(false);
 	}
