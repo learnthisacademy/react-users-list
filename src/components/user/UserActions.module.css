@@ -1,0 +1,41 @@
+.wrapper {
+	position: relative;
+}
+
+.dropdown {
+	position: absolute;
+	top: 0;
+	right: 0;
+	z-index: 100;
+
+	margin: 0;
+	padding: 0;
+	list-style: none;
+
+	background-color: var(--color-white);
+	box-shadow: var(--shadow-sm);
+	border-radius: var(--radius-md);
+	font-size: var(--text-sm);
+
+	width: 11rem;
+
+	overflow: hidden;
+}
+
+.dropdown li {
+	display: flex;
+	align-items: center;
+	gap: 1rem;
+
+	padding: 1rem 1.25rem;
+
+	cursor: pointer;
+}
+
+.dropdown li:hover {
+	background-color: var(--color-lightgray);
+}
+
+.dropdown svg {
+	height: 1.25rem;
+}
