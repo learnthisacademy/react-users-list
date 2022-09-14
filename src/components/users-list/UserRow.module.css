@@ -19,7 +19,7 @@
 }
 
 .name {
-	width: 45%;
+	width: 50%;
 }
 
 .status,
@@ -28,5 +28,5 @@
 }
 
 .action {
-	width: 15%;
+	width: 10%;
 }
