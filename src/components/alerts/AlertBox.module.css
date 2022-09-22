@@ -1,0 +1,29 @@
+.success {
+	background-color: var(--color-green);
+}
+
+.error {
+	background-color: var(--color-red);
+}
+
+.success,
+.error {
+	display: flex;
+	align-items: center;
+	gap: 0.75rem;
+
+	padding: 1rem;
+
+	color: var(--color-white);
+	border-radius: var(--radius-md);
+}
+
+.icon {
+	height: 2.25rem;
+	width: 2.25rem;
+}
+
+.success p,
+.error p {
+	margin: 0;
+}
