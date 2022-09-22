@@ -47,9 +47,9 @@ const useAlert = () => {
 	useEffect(() => {
 		const callback = alertData => setAlert(alertData);
 
-		const handler = alertBox.suscribe(callback);
+		const handler = alertBox.subscribe(callback);
 
-		return () => alertBox.unsuscribe(handler);
+		return () => alertBox.unsubscribe(handler);
 	}, []);
 
 	return alert;
